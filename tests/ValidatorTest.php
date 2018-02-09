@@ -56,7 +56,7 @@ class ValidatorTest extends TestCase
         $this->assertTrue(is_object($validator));
 
         try {
-            $valid = $validator->validate(01234567890);
+            $valid = $validator->validate('01234567890');
         } catch (\CloudDataService\NHSNumberValidation\InvalidNumberException $e) {
             return;
         }
